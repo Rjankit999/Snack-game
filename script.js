@@ -5,15 +5,15 @@ const blockWidth = 80;
 const cols = Math.floor(board.clientWidth / blockWidth);
 const rows = Math.floor(board.clientHeight / blockHeight);
 
-const blocks=[]
-const snake=[
-    {x:1,y:3},
-    {x:1,y:4},
-    {x:1,y:5},
-    
+const blocks = []
+const snake = [
+    { x: 1, y: 3 },
+    { x: 1, y: 4 },
+    { x: 1, y: 5 },
+
 ]
 
-let diraction='right'
+let diraction = 'left'
 
 
 for (let row = 0; row < rows; row++) {
@@ -23,18 +23,22 @@ for (let row = 0; row < rows; row++) {
         block.classList.add("block")
         blocks[`${row}-${col}`] = block;
         board.appendChild(block);
-        block.innerText=`${row} ${col}`
+        block.innerText = `${row} ${col}`
     }
 }
 
-function render(){
-    snake.forEach(segment=>{
+function render() {
+    snake.forEach(segment => {
         (blocks[`${segment.x}-${segment.y}`]).classList.add("fill")
     })
-    
+
 }
 
-setInterval(()=>{
-    const head=snake[snake.length-1]
+setInterval(() => {
+    let head = null;
+    if (diraction === "left") {
+        head = {x: snake[0].x,y:snake[0].y-1}
+    }
+    snake.unshift(head)
     render()
-},300)
+}, 300)

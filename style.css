@@ -17,7 +17,8 @@ main {
     height: 100%;
     width: 100%;
 }
-section{
+
+section {
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 
 }
 
@@ -40,19 +41,27 @@ section{
     border-radius: 10px;
 
 }
-.board{
+
+.board {
     border: 2px solid rgb(77, 75, 75);
     flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
-    grid-template-rows: repeat(auto-fill,minmax(80px,1fr));
-   
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+
 }
-.block{
+
+.block {
     /* height: 30px;
     width: 30px; */
     border: 0.1px solid rgb(72, 66, 66);
 }
+
 .fill{
-    background-color: aliceblue;
+    background:limegreen;
+}
+
+.food{
+    background:red;
+    border-radius:50%;
 }
