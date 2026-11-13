@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,11 +57,11 @@ section {
     border: 0.1px solid rgb(72, 66, 66);
 }
 
-.fill{
+/* .fill{
     background:limegreen;
 }
 
 .food{
     background:red;
     border-radius:50%;
-}
+} */ */
