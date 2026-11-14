@@ -8,19 +8,19 @@
 <body>
     <h1>Hello user</h1>
 
+    <button id="btn">Click me</button>
+
     <script>
+        let butten=document.getElementById("btn");
+        butten.onclick=function(){
+            alert("Butten was click");
+        };
 
+        butten.addEventListener("click",function(){
+            document.body.style.backgroundColor="lightblue";
+            
+        })
         
-            let a=90
-            console.log(a);
-        
-       
-        
-            let a=92
-            console.log(a);
-        
-        
-
     </script>
 </body>
 </html>
